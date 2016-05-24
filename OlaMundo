@@ -1,0 +1,15 @@
+/**
+ * Desenvolvido por: Fernando J. S. Bomfim.
+ */
+
+public class OlaMundo {
+
+    // Atalho "psvm" e pressiona tab.
+    public static void main(String[] args) {
+        
+        // Atalho "sout" e pressiona tab.
+        System.out.println("Olá Mundo!");
+        
+    }
+    
+}
