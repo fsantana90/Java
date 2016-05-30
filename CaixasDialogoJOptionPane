@@ -1,0 +1,24 @@
+/**
+ * Desenvolvido por: Fernando J. S. Bomfim.
+ */
+
+import javax.swing.JOptionPane;
+
+public class CaixasDialogoJOptionPane {
+
+    public static void main(String[] args) {
+
+        // Exibe a caixa de diálogo com uma mensagem.
+        JOptionPane.showMessageDialog(null, "Olá Mundo!", "Título da mensagem", JOptionPane.INFORMATION_MESSAGE);
+
+        // Exibe a caixa diálogo para o usuário informar alguma entrada.
+        JOptionPane.showInputDialog(null, "Qual é o seu nome?", "Nome do usuário", JOptionPane.QUESTION_MESSAGE);
+
+        // Exibe a caixa de diálogo com uma mensagem.
+        JOptionPane.showConfirmDialog(null, "Você é maior de 18 anos?", "Idade usuário", JOptionPane.YES_NO_OPTION);
+
+        //Exibe a caixa de diálogo com as opções.
+        JOptionPane.showOptionDialog(null, "Você deseja realmente sair?", "Sair?", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+    }
+
+}
