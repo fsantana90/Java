@@ -21,7 +21,8 @@ public class CalculoIMC {
 
         // Calcula o IMC.
         double imc = peso / Math.pow(altura, 2);
-
+        
+        // Estrutura condicional do IMC.
         if (imc < 17) {
             JOptionPane.showMessageDialog(null, "Olá, " + nome + "\n\nSeu Índice de Massa Corporal é de " + decimal.format(imc) + "\nVocê está muito abaixo do seu peso ideal.\n\n");
         } else if (imc >= 17 && imc <= 18.4) {
