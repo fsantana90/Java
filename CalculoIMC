@@ -1,0 +1,43 @@
+/**
+ * Desenvolvido por: Fernando J. S. Bomfim.
+ */
+
+import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
+
+public class CalculoIMC {
+
+    public static void main(String[] args) {
+
+        // Usuário informa o nome no campo.
+        String nome = JOptionPane.showInputDialog(null, "Informe seu nome", "Nome do usuário", JOptionPane.QUESTION_MESSAGE); 
+        // Usuário informa o peso em kg no campo.
+        double peso = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe o seu peso (em kg)"));
+        // Usuário informa altura em metros no campo.
+        double altura = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe a sua altura (em metros)"));
+
+        // Define a quantidade de casas decimais do double.
+        DecimalFormat decimal = new DecimalFormat("0.00");
+
+        // Calcula o IMC.
+        double imc = peso / Math.pow(altura, 2);
+
+        if (imc < 17) {
+            JOptionPane.showMessageDialog(null, "Olá, " + nome + "\n\nSeu Índice de Massa Corporal é de " + decimal.format(imc) + "\nVocê está muito abaixo do seu peso ideal.\n\n");
+        } else if (imc >= 17 && imc <= 18.4) {
+            JOptionPane.showMessageDialog(null, "Olá, " + nome + "\n\nSeu Índice de Massa Corporal é de " + decimal.format(imc) + "\nVocê está abaixo do seu peso ideal.\n\n");
+        } else if (imc >= 18.5 && imc <= 24.99) {
+            JOptionPane.showMessageDialog(null, "Olá, " + nome + "\n\nSeu Índice de Massa Corporal é de " + decimal.format(imc) + "\nParabéns, você está em seu peso ideal!\n\n");
+        } else if (imc >= 25 && imc <= 29.99) {
+            JOptionPane.showMessageDialog(null, "Olá, " + nome + "\n\nSeu Índice de Massa Corporal é de " + decimal.format(imc) + "\nSobrepeso - Você está acima do seu peso ideal.\n\n");
+        } else if (imc >= 30 && imc <= 34.99) {
+            JOptionPane.showMessageDialog(null, "Olá, " + nome + "\n\nSeu Índice de Massa Corporal é de " + decimal.format(imc) + "\nObesidade - Grau I.\n\n");
+        } else if (imc >= 35 && imc <= 39.99) {
+            JOptionPane.showMessageDialog(null, "Olá, " + nome + "\n\nSeu Índice de Massa Corporal é de " + decimal.format(imc) + "\nObesidade - Grau II (Severa).\n\n");
+        } else {
+            JOptionPane.showMessageDialog(null, "Olá, " + nome + "\n\nSeu Índice de Massa Corporal é de " + decimal.format(imc) + "\nObesidade - Grau III (Mórbida).\n\n");
+        }
+        
+    }
+    
+}
